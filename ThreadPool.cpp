@@ -89,8 +89,8 @@ ThreadPool::ThreadPool(size_t threads) : thread_count(threads), stop(false), idl
                             this->_enqueue_priority(task.callback);
                         } else {
                             minInterval = (minInterval > ms) ? ms : minInterval;
-                            minInterval = (minInterval > task.interval) ? task.interval : minInterval;
                         }
+                        minInterval = (minInterval > task.interval) ? task.interval : minInterval;
                     }
                 }
                 nmillisecond = minInterval.count();
