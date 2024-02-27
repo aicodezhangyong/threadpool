@@ -88,7 +88,7 @@ ThreadPool::ThreadPool(size_t threads) : thread_count(threads), stop(false), idl
                             task.lastRunTime = now;
                             this->_enqueue_priority(task.callback);
                         } else {
-                            ms = ms - task.interval;
+                            ms = task.interval - ms;
                             minInterval = (minInterval > ms) ? ms : minInterval;
                         }
                         minInterval = (minInterval > task.interval) ? task.interval : minInterval;
