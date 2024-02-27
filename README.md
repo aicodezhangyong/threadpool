@@ -25,7 +25,7 @@ do {
 	status = result.wait_for(std::chrono::milliseconds(1));
 	if (status == std::future_status::ready) {
 		int return_val = result.get();
-		std::cout << "Non-blocking Result: " << result_non_blocking << std::endl;
+		std::cout << "return_val Result: " << return_val << std::endl;
 	} else if (status == std::future_status::timeout) {
 		std::cout << "Operation still not ready..." << std::endl;
 	} else if (status == std::future_status::deferred) {
