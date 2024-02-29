@@ -2,7 +2,7 @@
 用C++11封装线程池、支持投递定时任务、投递延迟任务、投递优先任务、投递普通任务、投递idle任务
 
 可以填线程数
-ThreadPool thrPool = new ThreadPool(4);
+ThreadPool thrPool = ThreadPool(4);
 
 投递普通任务
 session_ptr pSession;
